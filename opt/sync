@@ -18,11 +18,11 @@
 # fi
 echo -n "Sync... "
 if [ -d world ]; then
-  bin/gdrive --service-account ${GOOGLE_SERVICE_ACCOUNT_PATH} sync upload world/ ${DRIVE_WORLD_ID}
+  bin/gdrive --service-account ../google-service.json sync upload world/ ${DRIVE_WORLD_ID}
 else
   mkdir -p world
   cd world
-  bin/gdrive --service-account ${GOOGLE_SERVICE_ACCOUNT_PATH} sync download --keep-local ${DRIVE_WORLD_ID} world/
+  bin/gdrive --service-account ../google-service.json sync download --keep-local ${DRIVE_WORLD_ID} world/
   cd ..
 fi
 echo "done"
