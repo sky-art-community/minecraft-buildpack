@@ -64,7 +64,7 @@ echo "done"
 echo -n "-----> Installing gdrive..."
 wget -q https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64
 mv gdrive-linux-x64 ${BUILD_DIR}/bin/gdrive
-chmod 777 ${BUILD_DIR}/gdrive
+chmod 777 ${BUILD_DIR}/bin/gdrive
 echo "done"
 
 minecraft_version=${MINECRAFT_VERSION:-"1.15.2"}
