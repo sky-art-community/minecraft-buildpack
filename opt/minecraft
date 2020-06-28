@@ -18,7 +18,7 @@ ngrok_pid=$!
 echo "Starting sync..."
 bin/sync
 if [ "$READ_ONLY" != "true" ]; then
-  eval "while true; do sleep 10; bin/sync; done &"
+  eval "while true; do sleep 30; bin/sync; done &"
   sync_pid=$!
 fi
 
