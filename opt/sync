@@ -23,6 +23,6 @@ else
   echo -n "Load world... "
   mkdir -p world
   cd world
-  gdrive -a ~/service-account.json download ${DRIVE_WORLD_ID} world/
+  gdrive -a ~/service-account.json download ${DRIVE_WORLD_ID} .
   cd ..
 fi
