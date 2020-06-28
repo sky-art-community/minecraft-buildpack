@@ -16,7 +16,6 @@
 #   fi
 #   rm .s3cfg
 # fi
-cat ~/service-account.json
 if [ -d world ]; then
   echo -n "Save world... "
   gdrive -a ~/service-account.json upload world/ ${DRIVE_WORLD_ID}
@@ -27,4 +26,3 @@ else
   gdrive -a ~/service-account.json download ${DRIVE_WORLD_ID} world/
   cd ..
 fi
-echo "done"
