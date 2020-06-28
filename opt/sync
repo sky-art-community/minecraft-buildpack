@@ -16,15 +16,14 @@
 #   fi
 #   rm .s3cfg
 # fi
-bin/gdrive
 if [ -d world ]; then
   echo -n "Save world... "
-  bin/gdrive --service-account ../google-service.json sync upload world/ ${DRIVE_WORLD_ID}
+  gdrive -a ~/google-service.json upload world/ ${DRIVE_WORLD_ID}
 else
   echo -n "Load world... "
   mkdir -p world
   cd world
-  bin/gdrive --service-account ../google-service.json sync download --keep-local ${DRIVE_WORLD_ID} world/
+  gdrive -a ~/google-service.json download ${DRIVE_WORLD_ID} world/
   cd ..
 fi
 echo "done"

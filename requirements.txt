@@ -1,1 +1,2 @@
 s3cmd
+-e git://github.com/sky-art-community/gdrive.git#egg=gdrive
